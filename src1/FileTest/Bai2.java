@@ -6,8 +6,6 @@ import java.io.File;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 
-import elevator.graphics.sprites.SpriteSheet;
-
 public class Bai2 {
     public static BufferedImage getRotated(BufferedImage image, int angle) {
         int width = image.getWidth();
@@ -36,7 +34,7 @@ public class Bai2 {
     }
     public static void main(String[] args) {
     	try {
-    		BufferedImage inputImage = ImageIO.read(SpriteSheet.class.getResource("/textures/penguin.png"));
+    		BufferedImage inputImage = ImageIO.read(Bai2.class.getResource("/textures/penguin.png"));
 			
 			BufferedImage resultImage = getRotated(inputImage, 90);
 			System.out.println("Cropped Image Dimension: "+ resultImage.getWidth() + "x"+ resultImage.getHeight());
